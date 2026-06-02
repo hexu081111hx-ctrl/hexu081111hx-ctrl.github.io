@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio & Resume</title>
+    <style>
+        /* Modern & Clean CSS Style */
+        :root {
+            --primary-color: #2563eb; /* Professional Tech Blue */
+            --text-color: #1f2937;
+            --text-light: #4b5563;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #111827;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #111827;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Grid Layout for Scores */
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .score-card {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .score-card h4 {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .score-card li, .skills-list li {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            color: var(--text-light);
+        }
+
+        /* Experience Item Styling */
+        .exp-item {
+            margin-bottom: 20px;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .exp-title {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .exp-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .exp-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            padding-left: 15px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .exp-header {
+                flex-direction: column;
+            }
+            body {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Section -->
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h1>[Your Full Name]</h1>
+        <p class="subtitle">High School Student | AP Curriculum</p>
+        <div class="contact-info">
+            Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | 
+            GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="color: var(--text-light); text-align: justify;">
+            I am a driven high school student in the AP curriculum with a strong passion for logical problem-solving and quantitative analysis. My academic journey is heavily focused on STEM, particularly in areas requiring rigorous analytical thinking and algorithmic design. I thrive on deconstructing complex challenges into manageable, step-by-step solutions, whether I am tackling advanced calculus-based mechanics, writing efficient object-oriented code, or solving competitive mathematics puzzles. Beyond the classroom, I actively engage in academic competitions and collaborative projects that push the boundaries of my technical skill set. I am always seeking opportunities to apply theoretical concepts to real-world applications and am eager to connect with mentors and peers. This portfolio highlights my academic achievements, extracurricular engagements, and continuous pursuit of excellence.
+        </p>
+    </section>
+
+    <!-- Academic Profile Section -->
+    <section id="academics">
+        <h2>Academic Profile</h2>
+        <div class="score-grid">
+            <!-- Standardized Testing -->
+            <div class="score-card">
+                <h4>Standardized Testing</h4>
+                <ul>
+                    <li><strong>SAT:</strong> [Total Score]</li>
+                    <li>&nbsp;&nbsp;• Reading & Writing: [Score]</li>
+                    <li>&nbsp;&nbsp;• Math: [Score]</li>
+                    <li style="margin-top: 10px;"><strong>TOEFL iBT:</strong> [Total Score]</li>
+                </ul>
+            </div>
+            
+            <!-- AP Courses -->
+            <div class="score-card">
+                <h4>Advanced Placement</h4>
+                <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 5px;">Total Courses: [Number]</p>
+                <ul>
+                    <li>• AP Physics C: Mechanics: [5]</li>
+                    <li>• AP Computer Science A: [5]</li>
+                    <li>• [AP Subject 3]: [Score]</li>
+                    <li>• [AP Subject 4]: [Score]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitions & Awards Section -->
+    <section id="competitions">
+        <h2>Competitions & Awards</h2>
+        
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">American Mathematics Competitions (AMC)</span>
+                <span class="exp-date">[Month, Year]</span>
+            </div>
+            <p class="exp-desc">
+                Achieved [Your Award, e.g., Honor Roll / Top 5%]. Engaged in rigorous competitive mathematics training, specifically focusing on complex problem-solving and logical deconstruction in geometry, number theory, and probability.
+            </p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">[Name of Competition 2]</span>
+                <span class="exp-date">[Month, Year]</span>
+            </div>
+            <p class="exp-desc">
+                [Your Award or Placement]. 1-2 sentences describing your role, the nature of the competition, and the specific technical or analytical skills you demonstrated during the event.
+            </p>
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities Section -->
+    <section id="activities">
+        <h2>Activities & Projects</h2>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">Java Programming & Algorithmic Practice</span>
+                <span class="exp-date">[Month, Year] – Present</span>
+            </div>
+            <p class="exp-desc">
+                Independently developed programming solutions and practiced object-oriented concepts using Java, focusing on arrays, ArrayLists, and logic optimization. Collaborated with peers to analyze code structures, troubleshoot syntax errors, and refine logic-based evaluations.
+            </p>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">[Activity or Club Name 2]</span>
+                <span class="exp-date">[Month, Year] – Present</span>
+            </div>
+            <p class="exp-desc">
+                [Your Role/Title]. Action verb + what you did + the result/impact. Example: Organized weekly study sessions for peers to deconstruct complex academic concepts and prepare for advanced examinations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="score-grid">
+            <div class="score-card">
+                <h4>Languages</h4>
+                <ul>
+                    <li>• English (Fluent / Professional)</li>
+                    <li>• Chinese (Native)</li>
+                </ul>
+            </div>
+            <div class="score-card">
+                <h4>Programming & Tools</h4>
+                <ul>
+                    <li>• Java</li>
+                    <li>• [Other Languages / Software, e.g., Python, Git]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
